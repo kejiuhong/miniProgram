@@ -1,0 +1,41 @@
+{
+  "cloud": true,
+  "pages": [
+    
+    "pages/enter/enter",
+    "pages/search/search",
+    "pages/foot/foot",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+  ],
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/enter/enter",
+        "text": "登记表",
+        "selectedIconPath": "images/checked.png",
+        "iconPath": "images/checked.png"
+      },
+      {
+        "selectedIconPath": "images/search.png",
+        "iconPath": "images/search.png",
+        "pagePath": "pages/search/search",
+        "text": "进度查询"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#dcdcdc",
+    "navigationBarTitleText": "设备之维修",
+    "navigationBarTextStyle": "black"
+  }
+}

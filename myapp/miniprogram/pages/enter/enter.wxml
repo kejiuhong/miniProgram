@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">维修/更换登记表</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <label class="hlabel">产品型号:</label>
+      <i></i><input id="product" name="product" data-value='{{product}}' value='{{object._product}}' placeholder="请在这里输入您的型号" placeholder-class="placeholder" />
+    </view>
+    <view class="section">
+      <label class="hlabel">S/N号码:</label>
+      <i></i><input id="SN" name="SN" data-value='{{SN}}' value='{{object._SN}}' placeholder="请在这里输入您的S/N号码" placeholder-class="placeholder" />
+    </view>
+    <view class="section">
+      <label class="hlabel">客户名称:</label>
+      <i></i><input id="customer" name="customer" data-value='{{customer}}' value='{{object._customer}}' placeholder="请在这里输入客户名称" placeholder-class="placeholder" />
+    </view>
+    <view class="section">
+      <label class="hlabel">购买日期:</label>
+      <i></i><input id="date" name="date" data-value='{{date}}' value='{{object._date}}' placeholder="请在这里输入您的购买日期" placeholder-class="placeholder" />
+    </view>
+    <view class="section">
+      <label class="hlabel">问题描述:</label>
+      <i></i><input id="problem" name="problem" data-value='{{problem}}' value='{{object._problem}}' placeholder="请将您的问题填写在这里" placeholder-class="placeholder" />
+    </view>
+    <view class="section">
+      <label class="hlabel">更换/维修:</label><i></i>
+      <radio-group class="radio-group" id="changeM" name="changeM" data-value='{{changeM}}' value='{{object._changeM}}' >
+          <label class="radio" wx:for="{{items}}">
+            <radio  value="{{item.name}}" checked="{{item.checked}}" />
+            {{item.value}}
+          </label>
+      </radio-group>
+    </view>
+    <view class="section">
+      <label class="hlabel">负责人:</label><i></i>
+      <radio-group class="radio-group" id="director" name="director" data-value='{{director}}' value='{{object._director}}'>
+          <label class="radio" wx:for="{{directorItems}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />
+            {{item.value}}
+          </label>
+      </radio-group>
+    </view>
+    <view class="section">
+      <label class="hlabel">是否免费:</label><i></i>
+      <radio-group class="radio-group" id="price" name="price" data-value='{{price}}' value='{{object._price}}'>
+          <label class="radio" wx:for="{{freeItems}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />
+            {{item.value}}
+          </label>
+      </radio-group>
+    </view>
+    <view class="btn-area">
+      <button type='primary' size="mini" form-type='submit'>提交</button>
+      <button type='default' size="mini" form-type='reset'>重置</button>
+    </view>
+</form>
+
+</view>
+<include src='/pages/foot/foot.wxml'/>

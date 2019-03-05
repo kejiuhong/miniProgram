@@ -1,0 +1,40 @@
+<!-- search massege -->
+<view class="container">
+  <view class="title">维修/更换进度查询</view>
+    <view class="section">
+    <input class="content" name="content" placeholder="请在这里输入您要查询的客户名称" placeholder-class="placeholder" value="{{searValue}}"  bindinput="searchInput"  confirm-type="search" focus="true" />
+    <button class="search" bindtap="search" type="primary" size='mini' bindconfirm="SearchClick" value='查询'>查询</button>
+    <view class="section_declare">
+    <text>*名称请使用大写英文</text>
+    </view>
+    </view>
+
+
+
+    <scroll-view scroll-y style="height: 300px;" class="result_display">
+      <!-- <view class="search_no" wx:if="{{!centent_Show}}">
+        <text>很抱歉,没有找到您要搜索的资料/(ㄒoㄒ)/~~</text>
+      </view>
+      <view class="search_no" wx:if="{{!content_error}}">
+        <text>输入名称请使用大写英文</text>
+      </view> -->
+      <view class="search_result" wx:for="{{contents}}">
+        <view class="content_title">客户名称：【{{item.CUSTOMER}}】</view>
+        <view class="content_title">型号：【{{item.PART_NO}}】</view>
+        <view class="content_result">RETURN_DATE：【{{item.RETURN_DATE}}】</view>
+        <view class="content_result">CREDIT_NO：【{{item.CREDIT_NO}}】</view>
+        <view class="content_result">EXCHANGE_S_N_NO：【{{item.EXCHANGE_S_N_NO}}】</view>
+        <view class="content_result">EXCHANGING_SHIPPING_DOC_NO：【{{item. EXCHANGING_SHIPPING_DOC_NO}}】</view>
+        <view class="content_result">RETURN：【{{item.RETURN}}】</view>
+        <view class="content_result">RMA：【{{item.RMA}}】</view>
+        <view class="content_result">BACK_TO_GE_DATE：【{{item.BACK_TO_GE_DATE}}】</view>
+        <view class="content_result">REPAIR_FINISH_DATE：【{{item.REPAIR_FINISH_DATE}}】</view>
+        <view class="content_result">QUOTATION_FINISH：【{{item.QUOTATION_FINISH}}】</view>
+        <view class="content_result">RECEIVED_THE_PO：【{{item.RECEIVED_THE_PO}}】</view>
+        <view class="content_result">SHIPPING_DOC_NO：【{{item.SHIPPING_DOC_NO}}】</view>
+      </view>
+    </scroll-view>
+
+  
+</view>
+<include src='/pages/foot/foot.wxml'/>

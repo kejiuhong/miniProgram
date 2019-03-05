@@ -1,0 +1,6 @@
+<!--pages/foot/foot.wxml-->
+<view class="container_foot">
+<view class="footer">
+  <text>三木且未工作室</text>
+</view>
+</view>
